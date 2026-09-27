@@ -1,5 +1,5 @@
 /* ============================================================
-   Site-wide animated backdrop — one visual system, four related
+   Hero-band animated backdrop , one visual system, four related
    but distinct stochastic processes, one per page:
 
      Home     "walk"      Brownian motion / random walk    (exploration)
@@ -8,12 +8,14 @@
      Contact  "converge"  Converging random walkers + links (getting in touch)
 
    Same palette, same line weight, same faint Poisson-scatter texture
-   on every page — only the underlying process differs, chosen by the
-   canvas's data-process attribute. Runs full-viewport, fixed, behind
-   all content. Respects prefers-reduced-motion.
+   on every page , only the underlying process differs, chosen by the
+   canvas's data-process attribute. The canvas is sized to (and clipped
+   by) its own hero container, not the full viewport, so it paints in
+   place with the rest of the page rather than as a separate layer.
+   Respects prefers-reduced-motion.
    ============================================================ */
 (function () {
-  const canvas = document.getElementById("bgCanvas");
+  const canvas = document.querySelector("canvas.hero-canvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
   const process = canvas.dataset.process || "walk";
@@ -24,12 +26,10 @@
   let width, height, dpr;
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    width = window.innerWidth;
-    height = window.innerHeight;
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
-    canvas.style.width = width + "px";
-    canvas.style.height = height + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
@@ -143,7 +143,7 @@
       ctx.moveTo(this.points[0].x, this.points[0].y);
       for (let i = 1; i < this.points.length; i++) ctx.lineTo(this.points[i].x, this.points[i].y);
       ctx.strokeStyle = this.color; ctx.lineWidth = 1.1; ctx.globalAlpha = 0.38; ctx.stroke();
-      // faint baseline (the reversion level) — like a target rate
+      // faint baseline (the reversion level) , like a target rate
       ctx.beginPath();
       ctx.setLineDash([2, 6]);
       ctx.moveTo(0, this.baseY); ctx.lineTo(width, this.baseY);

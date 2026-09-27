@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<canvas id="bgCanvas" data-process="jump"></canvas>
 
 <header class="site-nav">
   <div class="nav-inner">
@@ -24,14 +23,19 @@
   </div>
 </header>
 
-<div class="page-wrap" style="padding-top:60px;">
+<section class="hero hero-sub">
+  <canvas class="hero-canvas" data-process="jump"></canvas>
+  <div class="page-wrap hero-content">
+    <span class="eyebrow">Selected Work</span>
+    <h1 style="margin:0 0 10px;">Projects</h1>
+    <p class="lede" style="margin-bottom:0;">
+      Quantitative finance and risk modeling first, followed by applied machine learning and statistics work.
+      Code for most of these lives on <a href="https://github.com/manyagupta-21" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+  </div>
+</section>
 
-  <span class="eyebrow">Selected Work</span>
-  <h1 style="margin:0 0 10px;">Projects</h1>
-  <p style="color:var(--muted); max-width:640px;">
-    Quantitative finance and risk modeling first, followed by applied machine learning and statistics work.
-    Code for most of these lives on <a href="https://github.com/manyagupta-21" target="_blank" rel="noopener">GitHub</a>.
-  </p>
+<div class="page-wrap">
 
   <!-- ===================== QUANT FINANCE & RISK ===================== -->
   <div class="category-label">Quantitative Finance &amp; Risk</div>

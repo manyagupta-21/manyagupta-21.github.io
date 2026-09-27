@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<canvas id="bgCanvas" data-process="ou"></canvas>
 
 <header class="site-nav">
   <div class="nav-inner">
@@ -24,18 +23,23 @@
   </div>
 </header>
 
-<div class="page-wrap" style="padding-top:60px;">
-
-  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
-    <div>
-      <span class="eyebrow">Curriculum Vitae</span>
-      <h1 style="margin:0;">Resume</h1>
+<section class="hero hero-sub">
+  <canvas class="hero-canvas" data-process="ou"></canvas>
+  <div class="page-wrap hero-content">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+      <div>
+        <span class="eyebrow">Curriculum Vitae</span>
+        <h1 style="margin:0;">Resume</h1>
+      </div>
+      <a class="btn btn-primary" href="assets/Manya_Gupta_Resume.pdf" download>Download PDF ↓</a>
     </div>
-    <a class="btn btn-primary" href="assets/Manya_Gupta_Resume.pdf" download>Download PDF ↓</a>
   </div>
+</section>
+
+<div class="page-wrap">
 
   <!-- EDUCATION -->
-  <div class="resume-block" style="margin-top:46px;">
+  <div class="resume-block" style="margin-top:0;">
     <h2>Education</h2>
     <table class="data-table">
       <thead>
@@ -68,62 +72,6 @@
         <li>Built the signal's theoretical distribution for an ongoing Fisher-Information-based spatial clustering hypothesis test.</li>
       </ul>
     </div>
-  </div>
-
-  <!-- KEY PROJECTS (condensed - full detail on Projects page) -->
-  <div class="resume-block">
-    <h2>Key Projects</h2>
-
-    <div class="resume-item">
-      <div class="row">
-        <h3>ControlPlane.ai: AI Risk-Control Layer</h3>
-        <span class="when">Aug '26 - Ongoing</span>
-      </div>
-      <p style="margin:2px 0 6px; color:var(--muted-2); font-family:var(--mono); font-size:0.76rem;">Accenture Innovation Challenge 2026</p>
-      <ul>
-        <li>Building a real-time Python control layer that scores every LLM response for performance, cost, and responsibility risk.</li>
-        <li>Designing Brier, self-consistency, PSI, and KS monitoring to detect hallucination, miscalibration, and drift.</li>
-        <li>Implementing a tiered allow/edit/review/block policy with cost-derived thresholds under asymmetric FP/FN costs.</li>
-      </ul>
-    </div>
-
-    <div class="resume-item">
-      <h3>FilingIQ <span style="color:var(--muted-2); font-weight:400; font-size:0.85rem;">· Self Project</span></h3>
-      <ul>
-        <li>Built a RAG pipeline over annual filings of JPMorgan, Bank of America, and Goldman Sachs for financial analysis.</li>
-        <li>Processed 10,870 text segments, generated all-MiniLM-L6-v2 embeddings, and indexed them in FAISS for retrieval.</li>
-        <li>Designed a RetrievalQA chain with a Groq-hosted LLM via LangChain, with a Streamlit UI for source attribution.</li>
-      </ul>
-    </div>
-
-    <div class="resume-item">
-      <h3>Vehicle Damage Severity Analysis <span style="color:var(--muted-2); font-weight:400; font-size:0.85rem;">· Self Project</span></h3>
-      <ul>
-        <li>Developed a multi-label deep learning model to classify 6 vehicle damage types using the CarDD image dataset.</li>
-        <li>Built a computer vision pipeline with COCO annotation parsing, image augmentation, and ImageNet normalization.</li>
-        <li>Benchmarked custom CNN, VGG16, and ResNet50, achieving the best Macro F1-score of 72.2% with VGG16.</li>
-      </ul>
-    </div>
-
-    <div class="resume-item">
-      <h3>Monetary Policy and Market Volatility <span style="color:var(--muted-2); font-weight:400; font-size:0.85rem;">· Self Project</span></h3>
-      <ul>
-        <li>Analysed the dynamic impact of RBI monetary-policy communication on NIFTY 50 and India VIX using policy documents.</li>
-        <li>Represented policy content using TF-IDF and GloVe, capturing key themes across inflation, growth, and liquidity.</li>
-        <li>Combined policy signals with lagged returns and momentum to predict India VIX shocks using RF, RNN, LSTM models.</li>
-      </ul>
-    </div>
-
-    <div class="resume-item">
-      <h3>Yield Curve Forecasting <span style="color:var(--muted-2); font-weight:400; font-size:0.85rem;">· Self Project</span></h3>
-      <ul>
-        <li>Analysed US Treasury yields alongside macroeconomic indicators to develop a yield-curve forecasting framework.</li>
-        <li>Evaluated stationarity and temporal dependence using ADF/KPSS and ACF/PACF, comparing ARIMAX, VAR, and DNS.</li>
-        <li>Improved forecast accuracy by up to 32% RMSE over Random Walk and integrated the forecasts into a pricing system.</li>
-      </ul>
-    </div>
-
-    <p style="margin-top:10px;"><a href="projects.html">See full project write-ups →</a></p>
   </div>
 
   <!-- SCHOLASTIC ACHIEVEMENTS -->
@@ -200,6 +148,12 @@
       <span class="pill">Financial Economics</span>
     </div>
     <p style="color:var(--muted-2); font-size:0.8rem; margin-top:10px; font-family:var(--mono);">* ongoing</p>
+  </div>
+
+  <!-- EXTRA-CURRICULAR -->
+  <div class="resume-block">
+    <h2>Extra-Curricular Activities</h2>
+    <p style="color:var(--muted);">Volunteered for FOSTER 2023, the annual science Open House of the Department of Statistics, The Maharaja Sayajirao University of Baroda.</p>
   </div>
 
 </div>
