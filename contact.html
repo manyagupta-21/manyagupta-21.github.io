@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Manya Gupta</title>
+<title>Contact, Manya Gupta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+<canvas id="bgCanvas" data-process="converge"></canvas>
 
 <header class="site-nav">
   <div class="nav-inner">
@@ -28,16 +29,22 @@
   <span class="eyebrow">Get in touch</span>
   <h1 style="margin:0 0 10px;">Contact</h1>
   <p style="color:var(--muted); max-width:560px;">
-    Open to conversations on quantitative research, credit risk, and financial modeling roles —
-    reach out through any of the channels below.
+    Open to conversations on quantitative research, credit risk, and financial modeling roles.
+    Reach out through any of the channels below.
   </p>
 
   <div class="contact-grid">
 
     <div class="contact-card">
       <span class="icon">✉</span>
-      <h3>Email</h3>
+      <h3>Institute Email</h3>
       <a href="mailto:manyag25@iitk.ac.in">manyag25@iitk.ac.in</a>
+    </div>
+
+    <div class="contact-card">
+      <span class="icon">✉</span>
+      <h3>Personal Email</h3>
+      <a href="mailto:manya.gupta.289@gmail.com">manya.gupta.289@gmail.com</a>
     </div>
 
     <div class="contact-card">
@@ -49,8 +56,7 @@
     <div class="contact-card">
       <span class="icon">in</span>
       <h3>LinkedIn</h3>
-      <!-- TODO: replace with your exact LinkedIn profile URL -->
-      <a href="https://www.linkedin.com/in/manyagupta-21" target="_blank" rel="noopener">linkedin.com/in/manyagupta-21</a>
+      <a href="https://www.linkedin.com/in/manya-g-7325532b7/" target="_blank" rel="noopener">linkedin.com/in/manya-g-7325532b7</a>
     </div>
 
     <div class="contact-card">
@@ -63,7 +69,7 @@
 
   <div class="card" style="margin-top:40px;">
     <p class="eq-float" style="margin:0;">
-      "P(response | outreach) is generally high — feel free to reach out."
+      "P(response | outreach) is generally high, feel free to reach out."
     </p>
   </div>
 
@@ -80,5 +86,6 @@
   </div>
 </footer>
 
+<script src="assets/stochastic-bg.js"></script>
 </body>
 </html>

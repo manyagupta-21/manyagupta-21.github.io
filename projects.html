@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects — Manya Gupta</title>
+<title>Projects, Manya Gupta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+<canvas id="bgCanvas" data-process="jump"></canvas>
 
 <header class="site-nav">
   <div class="nav-inner">
@@ -37,11 +38,11 @@
   <div class="card-grid">
 
     <div class="card project-card">
-      <span class="meta">Self Project · Oct '25 – Mar '26</span>
+      <span class="meta">Self Project · Oct '25 - Mar '26</span>
       <h3>Mortgage Credit Risk Analytics</h3>
       <ul>
         <li>Built a mortgage credit risk framework on <strong>Freddie Mac data (33M+ records)</strong> with WOE/IV encoding, imbalance handling, and vintage splits.</li>
-        <li>Benchmarked XGBoost, Random Forest, and Logistic Regression — selected XGBoost at <strong>0.12 Brier / 0.74 PR-AUC</strong>.</li>
+        <li>Benchmarked XGBoost, Random Forest, and Logistic Regression, selecting XGBoost at <strong>0.12 Brier / 0.74 PR-AUC</strong>.</li>
         <li>Estimated LGD via 2-stage GLM on 17K+ defaults; computed Expected Loss from PD × LGD × EAD.</li>
         <li>Stress-tested crisis vintages: <strong>PD rose 2.06×</strong>, EL grew from 3.94% to 8.50% of exposure.</li>
       </ul>
@@ -50,7 +51,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Self Project · Jan '26 – Feb '26</span>
+      <span class="meta">Self Project · Jan '26 - Feb '26</span>
       <h3>Yield Curve Forecasting</h3>
       <ul>
         <li>Built a Treasury yield-curve forecasting framework using 30+ years of US yields and macro indicators.</li>
@@ -63,7 +64,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Course Project · Feb '26 – Mar '26 · MTH209</span>
+      <span class="meta">Course Project · Feb '26 - Mar '26 · MTH209</span>
       <h3>longevityRiskR</h3>
       <ul>
         <li>R package implementing a stochastic mortality model with exponential improvement and Gaussian shocks.</li>
@@ -76,10 +77,10 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Self Project · May '26 – Jun '26</span>
+      <span class="meta">Self Project · May '26 - Jun '26</span>
       <h3>Monetary Policy &amp; Market Volatility</h3>
       <ul>
-        <li>NLP market-risk pipeline over RBI policy documents (2020–25), joined with NIFTY 50 and India VIX.</li>
+        <li>NLP market-risk pipeline over RBI policy documents (2020-25), joined with NIFTY 50 and India VIX.</li>
         <li>Engineered TF-IDF and 100D GloVe text signals with lagged returns and momentum, chronologically aligned.</li>
         <li>Random Forest, RNN, and LSTM models predicting India VIX shocks from market + text features.</li>
         <li>Document-level policy representations quantifying inflation, growth, liquidity, and stability themes.</li>
@@ -89,7 +90,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Self Project · Apr '26 – Jun '26</span>
+      <span class="meta">Self Project · Apr '26 - Jun '26</span>
       <h3>FilingIQ</h3>
       <ul>
         <li>RAG pipeline over annual filings of JPMorgan, Bank of America, and Goldman Sachs.</li>
@@ -102,7 +103,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Aug '26 – Ongoing · Accenture Innovation Challenge 2026</span>
+      <span class="meta">Aug '26 - Ongoing · Accenture Innovation Challenge 2026</span>
       <h3>ControlPlane.ai</h3>
       <ul>
         <li>Real-time control layer scoring every LLM response for performance, cost, and responsibility risk pre-delivery.</li>
@@ -121,7 +122,7 @@
   <div class="card-grid">
 
     <div class="card project-card">
-      <span class="meta">Self Project · Jun '26 – Jul '26</span>
+      <span class="meta">Self Project · Jun '26 - Jul '26</span>
       <h3>Vehicle Damage Severity Analysis</h3>
       <ul>
         <li>Multi-label deep learning model in PyTorch classifying 6 vehicle damage types on the CarDD dataset.</li>
@@ -134,7 +135,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Self Project · Nov '25 – Dec '25</span>
+      <span class="meta">Self Project · Nov '25 - Dec '25</span>
       <h3>Energy Consumption Prediction</h3>
       <ul>
         <li>End-to-end pipeline with preprocessing, categorical encoding, feature selection.</li>
@@ -147,12 +148,12 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Self Project · Feb '26 – Mar '26</span>
+      <span class="meta">Self Project · Feb '26 - Mar '26</span>
       <h3>Customer Segmentation</h3>
       <ul>
         <li>Segmentation strategy from 2,000+ records, handling missing values and outliers.</li>
-        <li>PCA reduced 29 features to 2–3 principal components for analysis and visualization.</li>
-        <li>K-Means, Hierarchical, and Gaussian Mixture clustering — <strong>0.71 silhouette score</strong>.</li>
+        <li>PCA reduced 29 features to 2-3 principal components for analysis and visualization.</li>
+        <li>K-Means, Hierarchical, and Gaussian Mixture clustering, achieving a <strong>0.71 silhouette score</strong>.</li>
         <li>3 customer segments identified, projected to lift engagement by 20%.</li>
       </ul>
       <div class="tags"><span class="tag">PCA</span><span class="tag">Clustering</span></div>
@@ -166,7 +167,7 @@
   <div class="card-grid">
 
     <div class="card project-card">
-      <span class="meta">Research Intern · SARIP, IIT Kanpur · May '26 – Jul '26</span>
+      <span class="meta">Research Intern · SARIP, IIT Kanpur · May '26 - Jul '26</span>
       <h3>Clustering Detection in Stochastic Transmitter Processes</h3>
       <ul>
         <li>Statistical test for detecting spatial clustering using only the aggregate received signal Y(t).</li>
@@ -178,7 +179,7 @@
     </div>
 
     <div class="card project-card">
-      <span class="meta">Course Project · Jul '24 – Apr '25</span>
+      <span class="meta">Course Project · Jul '24 - Apr '25</span>
       <h3>General Insurance: Awareness &amp; Preferences</h3>
       <ul>
         <li>Primary survey using 4-stage area sampling to assess insurance awareness in Vadodara.</li>
@@ -192,7 +193,7 @@
   </div>
 
   <p style="margin-top:50px; color:var(--muted-2); font-family:var(--mono); font-size:0.85rem;">
-    Repository names on GitHub may differ slightly from project titles above — see
+    Repository names on GitHub may differ slightly from project titles above, see
     <a href="https://github.com/manyagupta-21" target="_blank" rel="noopener">github.com/manyagupta-21</a> for the full list.
   </p>
 
@@ -209,5 +210,6 @@
   </div>
 </footer>
 
+<script src="assets/stochastic-bg.js"></script>
 </body>
 </html>
