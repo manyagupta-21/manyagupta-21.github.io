@@ -123,15 +123,18 @@ nav.links a.active { color: var(--accent); }
 .hero.hero-sub {
   padding: 64px 0 44px;
 }
-.hero canvas.hero-canvas {
-  position: absolute;
+.hero-content { position: relative; z-index: 2; }
+
+/* ---------- persistent full-page animated backdrop ---------- */
+#site-canvas {
+  position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.55;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  opacity: 0.5;
   pointer-events: none;
 }
-.hero-content { position: relative; z-index: 2; }
 
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -182,7 +185,9 @@ nav.links a.active { color: var(--accent); }
   margin: 50px 0;
 }
 .stat-cell {
-  background: var(--panel-2);
+  background: rgba(15, 22, 38, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 22px 20px;
   text-align: left;
 }
@@ -207,7 +212,9 @@ section { margin: 70px 0; }
 
 /* ---------- cards ---------- */
 .card {
-  background: var(--panel);
+  background: rgba(18, 26, 44, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 26px 28px;
@@ -368,7 +375,9 @@ table.data-table tr:last-child td { border-bottom: none; }
 }
 .contact-card {
   display: block;
-  background: var(--panel);
+  background: rgba(18, 26, 44, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
@@ -381,7 +390,7 @@ table.data-table tr:last-child td { border-bottom: none; }
 a.contact-card:hover {
   border-color: var(--teal);
   transform: translateY(-3px);
-  background: var(--panel-2);
+  background: rgba(15, 22, 38, 0.82);
   text-decoration: none;
 }
 .contact-card.contact-card-static { cursor: default; }
