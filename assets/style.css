@@ -367,12 +367,25 @@ table.data-table tr:last-child td { border-bottom: none; }
   margin-top: 20px;
 }
 .contact-card {
+  display: block;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
   text-align: left;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
+a.contact-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
+  background: var(--panel-2);
+  text-decoration: none;
+}
+.contact-card.contact-card-static { cursor: default; }
+.contact-card.contact-card-static:hover { transform: none; border-color: var(--border); }
 .contact-card .icon {
   font-family: var(--serif);
   font-size: 1.6rem;
@@ -380,8 +393,14 @@ table.data-table tr:last-child td { border-bottom: none; }
   margin-bottom: 10px;
   display: block;
 }
-.contact-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
-.contact-card a { font-size: 0.95rem; word-break: break-word; }
+.contact-card h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--text); }
+.contact-card .contact-value {
+  display: block;
+  font-size: 0.95rem;
+  word-break: break-word;
+  color: var(--teal-soft);
+}
+a.contact-card:hover .contact-value { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- footer ---------- */
 footer {
